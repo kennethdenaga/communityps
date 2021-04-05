@@ -1,0 +1,62 @@
+1615996878458	geckodriver	INFO	Listening on 127.0.0.1:53277
+1615996878465	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile2cdGLB"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615996884111	Marionette	INFO	Listening on port 35643
+1615996884238	Marionette	WARN	TLS certificate errors will be ignored for this session
+1615996920588	Marionette	INFO	Stopped listening on port 35643
+1615997226913	geckodriver	INFO	Listening on 127.0.0.1:48789
+1615997226923	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileVNGHiw"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615997232828	Marionette	INFO	Listening on port 45173
+1615997232941	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+1615998294986	geckodriver	INFO	Listening on 127.0.0.1:33267
+1615998294997	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileM9u7cV"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615998308469	Marionette	INFO	Listening on port 41847
+1615998309209	Marionette	WARN	TLS certificate errors will be ignored for this session
+1615998473023	geckodriver	INFO	Listening on 127.0.0.1:53503
+1615998473036	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilerhImLo"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615998482244	Marionette	INFO	Listening on port 39991
+1615998482880	Marionette	WARN	TLS certificate errors will be ignored for this session
+1615998510663	Marionette	INFO	Stopped listening on port 45173
+1615998511807	Marionette	INFO	Stopped listening on port 41847
+1615998514010	Marionette	INFO	Stopped listening on port 39991
+1615998532354	geckodriver	INFO	Listening on 127.0.0.1:54551
+1615998533356	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileGntQHw"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615998541241	Marionette	INFO	Listening on port 44521
+1615998541568	Marionette	WARN	TLS certificate errors will be ignored for this session
+1615998788493	Marionette	INFO	Stopped listening on port 44521
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615998962042	geckodriver	INFO	Listening on 127.0.0.1:34635
+1615998962054	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileC7eoX7"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615998967480	Marionette	INFO	Listening on port 39993
+1615998967638	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource:///actors/LightweightThemeChild.jsm, line 38: TypeError: this.contentWindow.top is null
+JavaScript error: resource:///actors/LightweightThemeChild.jsm, line 38: TypeError: this.contentWindow.top is null
+JavaScript error: resource:///actors/LightweightThemeChild.jsm, line 38: TypeError: this.contentWindow.top is null
+1615999142877	Marionette	INFO	Stopped listening on port 39993
+1616031953968	geckodriver	INFO	Listening on 127.0.0.1:52985
+1616031954963	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilesDBoEV"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616031961445	Marionette	INFO	Listening on port 44673
+1616031961562	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 190: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: , line 0: uncaught exception: Timeout
+JavaScript error: resource://devtools/client/jsonview/Sniffer.jsm, line 56: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1616035800149	Marionette	INFO	Stopped listening on port 44673
