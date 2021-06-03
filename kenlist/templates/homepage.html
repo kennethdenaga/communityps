@@ -1,0 +1,88 @@
+<html>
+<head>
+<style>
+  h3 {
+  font-family: Arial; 
+  font-size: 18pt;         
+  font-style: normal; 
+  font-weight: bold; 
+  color:yellow;
+  text-align: center; 
+  text-decoration: underline
+}
+tr {
+  background-color: ;
+  text-align: center;}
+
+</style>
+  
+
+    
+<title>Community pantry system</title>
+
+</head>
+ 
+<body>
+<h2><mark>Community pantry system/mark></h2>
+<p style="color:DodgerBlue;">"Focus in your Goals!"</p>
+<table id="bgf" name="tr">
+
+<table align="center" cellpadding = "17">
+
+
+
+<table align="center" cellpadding = "17">
+
+<form method="POST" action="/kenlist/new">
+<tr>
+<td>Full Name</td>
+<td><input id ="fname" type="text" name="fname" maxlength="30"
+  placeholder="Enter your fullname" required="required" />
+</td>
+</tr>
+
+<tr>
+<td>Email Address</td>
+<td><input id ="eadd" type="Email" name="eadd" maxlength="30"
+  placeholder="Enter your Email Address" required="required" />
+</td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+<td colspan="2" align="center">
+<input style="color:Blue;" id="boxConfirm" type="submit" value="Confirm">
+<input style="color:Tomato;" type="reset" value="Clear">
+</td>
+</tr>
+</table>
+ {% csrf_token %}
+</form>
+    
+    <table id="listTable" name=tr>
+         
+         <tr>
+    <th style="color:Gray;">Full Name|</th>
+    <th style="color:Gray;">|Email Address</th> 
+  </tr>
+       {% for item in items %}
+        <tr>
+          
+          <td>{{ item.fullname }}</td>
+      
+          <td>{{ item.eadd }}</td>
+    
+        
+        </tr>
+         {% endfor %}
+    </table>
+
+</body>   
+</html>
+
+ 

@@ -1,1 +1,1 @@
-This is my repository is for the BossKen web application project!
+This repository is for web application

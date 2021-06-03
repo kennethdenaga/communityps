@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class KenlistConfig(AppConfig):
-    name = 'kenlist'
+class LmlistConfig(AppConfig):
+    name = 'BossKen'

@@ -1,0 +1,92 @@
+<html>
+<head>
+<style>
+  h3 {
+  font-family: Arial; 
+  font-size: 18pt;         
+  font-style: normal; 
+  font-weight: bold; 
+  color:SlateBlue;
+  text-align: center; 
+  text-decoration: underline
+
+
+
+}
+
+  tr {
+  background-color: ;
+  text-align: center;
+</style>
+  
+<title>Community pantry system<</title>
+
+</head>
+ 
+<body>
+<h2 colspan="4" align="center"><mark>Community pantry system</mark></h2>
+
+ 
+<table align="center" cellpadding = "9">
+
+<form method="POST" action="/kenlist/{{ donator.id }}/add_donation">
+
+ 
+
+<tr>
+<td>Vision</td>
+<td><input id="vision"type="text" name="vision" maxlength="30"/ required="required">
+</td>
+</tr>
+ 
+
+<tr>
+<td>Goal</td>
+<td><input id="goal" type="text" name="goal" maxlength="30"/ required="required">
+</td>
+</tr>
+
+  <tr>
+<td>Network Income ₱</td>
+<td><input id="ni" type="number" name="ni" maxlength="30"/ required="required">
+</td>
+</tr>
+
+    {% csrf_token %}
+<tr>
+<td colspan="2" align="center">
+<input style="color:Blue;" type="submit" value="Submit">
+<input style="color:Tomato;" type="reset" value="Clear" >
+</td>
+</tr>
+ 
+         
+<table id="id_table" name='tr'>
+  <table style="width:100%">     
+  
+  <caption>_________________________________________________________________________________________</caption>
+
+  <tr>
+    <th>Account Name</th>
+    
+    <th>Vision</th>
+    <th>Goal</th>
+    <th>Network Income</th>
+       </tr>
+       {% for item in list.item_set.all %} 
+       <! -- {{ forloop.counter }}:  -->
+        <td>{{ item.fullname  }}</td>
+        
+   
+        <td>{{ item.vision }}</td>
+        <td>{{ item.goal }}</td>
+        <td>{{ item.ni }}</td>
+          </tr>
+
+        {% endfor %}
+    </table>
+
+</body>   
+</html>
+
+ 

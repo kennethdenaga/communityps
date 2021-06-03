@@ -1,5 +1,5 @@
 """
-WSGI config for BossKen project.
+WSGI config for MaglinesProject project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
