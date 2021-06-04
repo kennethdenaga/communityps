@@ -5768,3 +5768,5 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 1622744157685	Marionette	WARN	TLS certificate errors will be ignored for this session
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1622744572134	Marionette	INFO	Stopped listening on port 38761
+1622744572179	Marionette	INFO	Stopped listening on port 45741
