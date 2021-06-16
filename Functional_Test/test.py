@@ -28,9 +28,9 @@ class PageTest(LiveServerTestCase):
 	def test_browser_title(self):
 	 self.browser.get('http://localhost:8000/')
 	 #self.browser.get(self.live_server_url)
-	 self.assertIn('Community pantry system',self.browser.title)
+	 self.assertIn('Community Pantry System',self.browser.title)
 	 header_text = self.browser.find_element_by_tag_name('h2').text
-	 self.assertIn('Community pantry system', header_text)
+	 self.assertIn('Community Pantry System', header_text)
 	 
 	 
 	 
@@ -41,6 +41,13 @@ class PageTest(LiveServerTestCase):
 	 time.sleep(1)
 	 inputfname.send_keys('Kenneth Denaga')
 	 
+	 time.sleep(1)
+
+	 inputeadd = self.browser.find_element_by_id('contactnumber')
+	 self.assertEqual(inputeadd.get_attribute('placeholder'),'Enter your contactnumber')
+	 inputeadd.click()
+	 time.sleep(1)
+	 inputeadd.send_keys('09054990958')
 	 time.sleep(1)
 	 
 	 
