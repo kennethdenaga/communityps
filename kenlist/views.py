@@ -4,20 +4,15 @@ from kenlist.models import Donator, Donation, Recipient, Location, Remarks
 
 #community pantry
 
-
-
-
 def home_page(request):
     donators = Donator.objects.all()
     return render(request, 'homepage.html', {'donators':donators})
+
 
 def homepage(request):
     donators = Donator.objects.all()
     return render(request, 'homepage.html', {'homepage':homepage})
 
-def signup(request):
-    donators = Donator.objects.all()
-    return render(request, 'signup.html', {'signup':signup})
 
 def donator(request):
     donators = Donator.objects.all()
@@ -30,6 +25,14 @@ def donation(request):
 def recepient(request):
     donators = Donator.objects.all()
     return render(request, 'recepient.html', {'recepient':recepient})
+
+def location(request):
+    donators = Donator.objects.all()
+    return render(request, 'location.html', {'location':location})
+
+def remarks(request):
+    donators = Donator.objects.all()
+    return render(request, 'remarks.html', {'remarks':remarks})
 
 def profile(request):
     donators = Donator.objects.all()
@@ -54,7 +57,7 @@ def view_donator(request, donator_id):
   
 def new_donator(request):
     donator_ = Donator.objects.create()
-    #donator_ = Donator.objects.create(name=request.POST['name'],contactnumber=request.POST['contact'], donator = donator_)
+    donator_ = Donator.objects.create(name=request.POST['name'],contactnumber=request.POST['contact'], donator = donator_)
     return redirect(f'/kenlist/{donator_.id}/')
 
 def add_donation(request, donator_id):
@@ -63,7 +66,8 @@ def add_donation(request, donator_id):
     return redirect(f'/kenlist/{donator_id}/')
 
 
-def datamanipulation(request):
+
+'''def datamanipulation(request):
     #Creating teacher's data
     donator = Donator(name="Kenneth", contactnumber="09054990958" )
     donator.save()
@@ -71,8 +75,8 @@ def datamanipulation(request):
     #Read all data
     donator = Donator.objects.all()
     result = 'Printing all Donation : <br>'
-    for x in teacher:
-        res += X.adviser+"<br>"
+    for x in donator_:
+        res += X.donation+"<br>"
 
     #Read one data
     donator =  Donator.get(contactnumber="09054990958")
@@ -101,6 +105,7 @@ def datamanipulation(request):
     qs = Donator.objects.order_by("name")
     for x in qs: 
         res += x.contactnumber + '<br>'
+        '''
 
 
 

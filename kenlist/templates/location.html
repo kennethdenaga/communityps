@@ -4,6 +4,144 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  
+  background: #232323;
+  color: blue;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: blueviolet;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
 body{
   margin:0;
   color:#6a6f8c;
@@ -246,8 +384,29 @@ body {
 </head>
 <body>
 
+<nav role="navigation">
+  <div id="menuToggle">
+   
+    <input type="checkbox" />
+    
+   
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    
+    <ul id="menu">
+      <a href="/kenlist/profile"><li>Profile</li></a>
+      <a href="/kenlist/about"><li>About</li></a>
+      <a href="/kenlist/info"><li>Info</li></a>
+      <a href="/kenlist/contact"><li>Contact</li></a>
+      <a href="" target="_blank"><li></li></a>
+    </ul>
+  </div>
+</nav>
+
 <div class="header">
-  <h2>Barangay Registration</h2>
+  <h2>Donate Here!</h2>
   
 
 <div id="nav">
@@ -266,6 +425,10 @@ body {
                 <div class="nav">
                     <a href="/kenlist/recepient">Recepient|</a>
                 </div>
+
+                <div class="nav">
+                    <a href="/kenlist/remarks">Remarks|</a>
+                </div>
         </div>
        
             
@@ -280,53 +443,54 @@ body {
   
 <div class="login-wrap">
   <div class="login-html">
-    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Location</label>
+    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"> -</label>
+    
     <div class="login-form">
       <div class="sign-in-htm">
         <div class="group">
-          <label for="user" class="label">Username</label>
-          <input id="user" type="text" class="input">
+          <label for="user" class="label">Location Place</label>
+          <input id="loc type="text" class="input" maxlength="30" placeholder="Enter your Location" required="required" />
         </div>
         <div class="group">
-          <label for="pass" class="label">Password</label>
-          <input id="pass" type="password" class="input" data-type="password">
+          <label for="user" class="label">Sent Date</label>
+          <input id="date type="text" class="input" maxlength="30" placeholder="Enter your Date" required="required" />
+        </div>
+        
+        <div class="group">
+          <input id="boxConfirm" type="submit" class="button" value="Next">
         </div>
         <div class="group">
-          <input id="check" type="checkbox" class="check" checked>
-          <label for="check"><span class="icon"></span> Keep me Signed in</label>
+        <input style="color:darkorange;" type="reset" class="button" value="Clear">
         </div>
-        <div class="group">
-          <input type="submit" class="button" value="Sign In">
-        </div>
-        <div class="hr"></div>
-        <div class="foot-lnk">
-          <a href="#forgot">Forgot Password?</a>
-        </div>
-      </div>
+        
+<form method="POST" action="/kenlist/new">
       <div class="sign-up-htm">
+
         <div class="group">
-          <label for="user" class="label">Username</label>
-          <input id="user" type="text" class="input">
+          <label for="user" class="label">Recipient Name</label>
+          <input id="rname" type="text" class="input" maxlength="30" placeholder="Enter your fullname" required="required" />
         </div>
         <div class="group">
-          <label for="pass" class="label">Password</label>
-          <input id="pass" type="password" class="input" data-type="password">
-        </div>
+          <label for="pass" class="label">Contact Number</label>
+          <input id="cn2" type="number" class="input" data-type="number" maxlength="11"
+        placeholder="Enter your Contact number" required="required" />
         <div class="group">
-          <label for="pass" class="label">Repeat Password</label>
-          <input id="pass" type="password" class="input" data-type="password">
+          <label for="user" class="label">Email Address</label>
+          <input id="eadd2" type="email" class="input" maxlength="30"
+        placeholder="Enter your Email Address" required="required" />
         </div>
+       
+       
         <div class="group">
-          <label for="pass" class="label">Email Address</label>
-          <input id="pass" type="text" class="input">
+          <input id="boxConfirm" type="submit" class="button" value="Finish">
         </div>
-        <div class="group">
-          <input type="submit" class="button" value="Sign Up">
+        <input style="color:darkorange;" type="reset" class="button" value="Clear">
         </div>
+
+      </form>
         <div class="hr"></div>
-        <div class="foot-lnk">
-          <label for="tab-1">Already Member?</a>
+        
         </div>
       </div>
     </div>

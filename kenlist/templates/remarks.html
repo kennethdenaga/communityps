@@ -406,7 +406,7 @@ body {
 </nav>
 
 <div class="header">
-  <h2>Donate Here!</h2>
+  <h2>Remarks Here!</h2>
   
 
 <div id="nav">
@@ -428,12 +428,14 @@ body {
                 <div class="nav">
                     <a href="/kenlist/location">Location|</a>
                 </div>
-                <div class="nav">
-                    <a href="/kenlist/remarks">Remarks|</a>
-                </div>
-          </div>   
+                
+        </div>
+       
+            
         </div>     
-      </div>
+                     
+                                 
+        </div>
     </div>
 
 
@@ -441,55 +443,45 @@ body {
   
 <div class="login-wrap">
   <div class="login-html">
-    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Donator's</label>
-    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"> Sign Up</label>
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Remarks</label>
+    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"> -</label>
+    
     <div class="login-form">
       <div class="sign-in-htm">
         <div class="group">
-          <label for="user" class="label">“DONATOR” means a person, corporation, association, or other organization that donates food to a Community Pantry System.</label>
-         
-        </div>  
+          <label for="user" class="label">Recipient Name</label>
+          <input id="loc type="text" class="input" maxlength="30" placeholder="Enter your Remarks" required="required" />
         </div>
-     
+        <div class="group">
+          <label for="user" class="label">Contact Number</label>
+          <input id="date type="text" class="input" maxlength="30" placeholder="Enter your Comtact Number" required="required" />
+        </div>
+        <div class="group">
+          <label for="user" class="label">Comment</label>
+          <input id="loc type="text" class="input" maxlength="30" placeholder="Enter your Comment" required="required" />
+        </div>
         
-<form method="POST" action="/new_donator">
-      <div class="sign-up-htm">
-
-        <div class="group">
-          <label for="user" class="label">Name</label>
-          <input id="dname" type="text" class="input" maxlength="30" placeholder="Enter your fullname" required="required" />
-        </div>
-        <div class="group">
-          <label for="pass" class="label">Contact Number</label>
-          <input id="cn" type="number" class="input" data-type="number" maxlength="11"
-        placeholder="Enter your Contact number" required="required" />
-        <div class="group">
-          <label for="user" class="label">Email Address</label>
-          <input id="eadd" type="email" class="input" maxlength="30"
-        placeholder="Enter your Email Address" required="required" />
-        </div>
-       
-       
         <div class="group">
           <input id="boxConfirm" type="submit" class="button" value="Next">
         </div>
+        <div class="group">
         <input style="color:darkorange;" type="reset" class="button" value="Clear">
         </div>
-      {% csrf_token %}
+        
+<form method="POST" action="/kenlist/new">
+      <div class="sign-up-htm">
+
+        
+
       </form>
         <div class="hr"></div>
-        <div class="foot-lnk">
         
-          <label for="user" class="label">Share your Blessings</label>
-         
-        </div> 
-
-
         </div>
       </div>
     </div>
   </div>
 </div>
+
 
 
 </div>
