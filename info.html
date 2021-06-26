@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: orange;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#nav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+#nav a:hover {
+  background-color: orange;
+  color: black;
+}
+#nav:hover {
+    border-bottom: 1px solid black;
+}
+
+#nav a.active {
+  
+  color: white;
+}
+
+#nav a:hover {
+    color: black;
+    font-size: large;
+}
+
+.right-side {
+    color: rgb(37, 141, 98);
+}
+
+
+.nav > .right-side > div {
+    margin-right: 20px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+.content {
+  padding: 16px;
+}
+
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.footer {
+    overflow: hidden;
+    background-color: lightgray;
+    padding: 1%;
+    text-align: center;
+    color: white;
+}
+
+#footer a:hover {
+    color: black;
+    font-size: large;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Community Pantry System</h2>
+  
+
+<div id="nav">
+  <div class="nav">
+    <div class="left-side">
+        <div class="nav">
+                <a href="/kenlist/homepage">Back to Home|</a>
+               
+        </div>
+       
+            
+        </div>     
+                     
+                                 
+        </div>
+    </div>
+
+
+<div class="subtitle"><h1>Information!</h1>
+
+<div><p>
+  These guidelines are for food DONATOR'S. By following these guidelines, food DONATOR'S will be able to safely prepare, handle, and provide food that can be accepted by Us. Many individuals and groups (“DONATOR'S”) provide food to organizations (“Community Pantry”) that then serve or distribute the food to needy individuals.
+
+</p>
+<P>Definitions
+“DONATOR” means a person, corporation, association, or other organization that donates food to a Community Pantry System.</P>
+
+<p>“DONATION” means an object or goods, gives by a person, corporation, association, or other organization.</p>
+
+<p>“RECEPIENT” implies a resident of the barangay who will be in charge in proper distribution of goods in the Community Pantry.</p>
+
+<p>Food Donation by Donators
+Donators are encouraged to donate foods that may not meet their specifications for reasons that do not affect food safety, such as package printing errors. Each food package may lack complete labeling required for commercial distribution, as long as the charitable distributing organization is given enough information to mark each container with the common name of the food. At least one accurate, complete label must be provided with each item and not reach the due date of expiration.
+
+<p>"Distressed Foods"
+Foods that have been stored for a long time, gone through a fire, or suffered another disaster may still be safe. Contact the food safety program of the local health agency to see if these foods can be safely donated under the specific circumstances involved.</p>
+
+<p>Important Note: Before making your donation, contact us to make sure that we will accept the type of food you intend to donate.</p>
+
+Foods Unsuitable for Donation
+Certain foods are not suitable for donation because of safety concerns. These foods include:
+
+<p>Home canned, vacuum-packed or pickled foods.
+Foods in soiled containers.
+Perishable foods past a “use by” date, unless frozen.
+Foods in sharply dented or rusty cans.
+Foods in opened or torn containers exposing the food to potential contamination.
+Unpasteurized milk.
+Foods with an “off” odor.
+Foods prepared, cooked, cooled, or reheated at home (except for baked goods).</p>
+
+<p>More Resources
+Contact your local health department's food safety office for additional advice on donating food safely.</p>
+</div>
+
+<br>
+<br>
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var nav = document.getElementById("nav");
+var sticky = nav.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    nav.classList.add("sticky")
+  } else {
+    nav.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
